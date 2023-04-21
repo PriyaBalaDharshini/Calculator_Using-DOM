@@ -59,9 +59,14 @@ function del() {
 }
 
 function calculate() {
-
-    var result = eval(display_output.value)
-    display_output.value = result;
+try
+{
+    display_output.value=eval(display_output.value)
+}
+    catch(err)
+    {
+        alert("Invalid input")
+    }
 
 }
 
